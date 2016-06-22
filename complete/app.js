@@ -28,7 +28,7 @@ var session = require('cookie-session');
 /* Configure Express web application */
 var app = express();
 app.use(express.static('public'));
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 app.enable('trust proxy');
 app.use(multer({ inMemory: true }));
 app.use(session({ signed: true, secret: config.cookieSecret }));
